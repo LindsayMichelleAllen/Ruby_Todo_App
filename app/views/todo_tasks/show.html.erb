@@ -2,9 +2,13 @@
 
 <%= render @todo_task %>
 
-<div>
-  <%= link_to "Edit this todo task", edit_todo_task_path(@todo_task) %> |
-  <%= link_to "Back to todo tasks", todo_tasks_path %>
+<br>
 
+<div>
+  <%= link_to "Edit this todo task", edit_todo_task_path(@todo_task) %> 
+  <br>
+  <%= link_to "Back to todo tasks", todo_tasks_path %> 
+  <br>
+  <br>
   <%= button_to "Destroy this todo task", @todo_task, method: :delete %>
 </div>

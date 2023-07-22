@@ -7,15 +7,3 @@
 <div>
   <%= link_to "Back to todo tasks", todo_tasks_path %>
 </div>
-
-<% if @todo_task.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@todo_task.errors.count, "error") %>Errors found:</h2>
-
-    <ul>
-      <% @article.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>

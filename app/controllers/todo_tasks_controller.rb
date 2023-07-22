@@ -21,7 +21,7 @@ class TodoTasksController < ApplicationController
 
   # POST /todo_tasks or /todo_tasks.json
   def create
-    @todo_task = TodoTask.new
+    @todo_task = TodoTask.new(task_params)
 
     respond_to do |format|
       if @todo_task.save
@@ -32,6 +32,10 @@ class TodoTasksController < ApplicationController
         format.json { render json: @todo_task.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  def task_params
+    params.require(:todo_task).permit(:description, :reminder, :dueby)
   end
 
   # PATCH/PUT /todo_tasks/1 or /todo_tasks/1.json
