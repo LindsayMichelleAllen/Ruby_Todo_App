@@ -1,0 +1,10 @@
+<h1>Editing todo task</h1>
+
+<%= render "form", todo_task: @todo_task %>
+
+<br>
+
+<div>
+  <%= link_to "Show this todo task", @todo_task %> |
+  <%= link_to "Back to todo tasks", todo_tasks_path %>
+</div>
