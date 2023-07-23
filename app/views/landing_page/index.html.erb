@@ -8,7 +8,7 @@
 
   <% if Current.user %>
     Logged in as: <%= Current.user.email %><br>
-    <= link_to 'Edit Password', edit_password_path %>
+    <%= link_to 'Edit Password', edit_password_path %>
     <%= button_to 'Logout', logout_path, method: :delete %>
     <% else %>
     <h2>Create a new account or login below to get started</h2>
