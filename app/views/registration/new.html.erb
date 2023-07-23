@@ -1,8 +1,12 @@
 <h1>Sign Up</h1>
-  <%= form_with model: @user, url: sign_up_path do |f| %>
+  <%= form_with model: @user, url: sign_up_path, method: "post" do |f| %>
     <p>
     <%= f.label 'email' %><br>
     <%= f.text_field :email %>
+    </p>
+    <p>
+    <%= f.label 'username' %><br>
+    <%= f.text_field :username %>
     </p>
     <p>
     <%= f.label 'password' %><br>
