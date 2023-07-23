@@ -70,5 +70,5 @@ Rails.application.configure do
   # Allow connections to local server on cloud IDE.
   config.hosts.clear
   
-  config.hosts << "ec2-3-133-111-132.us-east-2.compute.amazonaws.com"
+  config.hosts << "ec2-3-145-39-9.us-east-2.compute.amazonaws.com"
 end
