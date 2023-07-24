@@ -6,7 +6,7 @@ class SessionController < ApplicationController
     if user.present? && user.authenticate(params[:password])
     # sets up user.id sessions
       session[:user_id] = user.id
-      redirect_to root_path, notice: 'Logged in successfully'
+      redirect_to todo_tasks_path, notice: 'Logged in successfully'
     else
       flash.now[:alert] = 'Invalid email or password'
       render :new

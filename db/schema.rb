@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_23_211614) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_24_155109) do
   create_table "todo_tasks", force: :cascade do |t|
     t.string "description"
     t.datetime "reminder"
@@ -18,12 +18,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_23_211614) do
     t.boolean "completed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "password_digest"
-    t.string "username"
+    t.string "username", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
