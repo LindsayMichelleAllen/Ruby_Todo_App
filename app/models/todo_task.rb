@@ -21,4 +21,13 @@ class TodoTask < ApplicationRecord
   # assocaitions
   # hasy_many :subtasks
   validates_with TodoTaskValidator
+  
+  def isCurrent
+    puts Current.user.username
+    puts self.username
+    if self.username == Current.user.username
+      return true
+    end
+    return false
+  end
 end
