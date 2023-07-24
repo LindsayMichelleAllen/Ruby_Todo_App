@@ -1,17 +1,19 @@
 <% if @todo_task.isCurrent %>
+<div id="form-centering">
 <%= render @todo_task %>
-
+</div>
 <br>
 
-<div>
-  <%= link_to "Edit this todo task", edit_todo_task_path(@todo_task) %> 
-  <br>
-  <%= link_to "Back to todo tasks", todo_tasks_path %> 
-  <br>
-  <br>
-  <%= button_to "Destroy this todo task", @todo_task, method: :delete %>
-  <p>
-  <%= link_to 'Return to Home', home_path, method: :get %>
-  </p>
+<div id="button-container">
+  <%= button_to "Edit Task", edit_todo_task_path(@todo_task), method: :get, class: "button" %> 
+</div>
+<div id="button-container">
+  <%= button_to "Delete Task", @todo_task, method: :delete, class: "button" %>
+</div>
+<div id="button-container">
+  <%= button_to "Back To Tasks", todo_tasks_path, method: :get, class: "button" %> 
+</div>
+<div id="button-container">
+  <%= button_to 'Return to Home', home_path, method: :get, class: "button" %>
 </div>
 <% end %>

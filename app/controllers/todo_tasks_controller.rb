@@ -27,7 +27,7 @@ class TodoTasksController < ApplicationController
 
     respond_to do |format|
       if @todo_task.save
-        format.html { redirect_to todo_task_url(@todo_task), notice: "Todo task was successfully created." }
+        format.html { redirect_to todo_tasks_path, method: :get, notice: "Todo task was successfully created." }
         format.json { render :show, status: :created, location: @todo_task }
       else
         format.html { render :new, status: :unprocessable_entity }

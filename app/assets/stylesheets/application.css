@@ -13,3 +13,87 @@
  *= require_tree .
  *= require_self
  */
+#header, #footer{
+	padding: 15px 20px 10px 5px;
+	display: flex;
+	width: 100%;
+	height: 8vh;
+	justify-content: center;
+	font-size: large;
+	font-weight: bold;
+	color: #2a2438;
+}
+
+#heading{
+	flex: 0 35%;
+	text-align: center;
+	font-size: 26px;
+	margin-top: 30px;
+}
+
+#button-container{
+    overflow: hidden;
+    width: 100%;
+	font-weight: 300;
+	font-size: 14px;
+	margin: 0 auto;
+	padding: 5px;
+	text-align: center;
+	display: flex;
+  	justify-content: center;
+}
+
+#nav-bar a{
+	margin: 0px 20px 0px 20px;
+}
+
+.button {
+  background-color: #5c5470; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  color: #dbd8e3;
+  font-size: 16px;
+  float: left;
+  margin: 5px;
+  min-width: 230px;
+}
+
+#background-color {
+	background-color: #dbd8e3;
+}
+
+#landing-text {
+	color: #352f44;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+#landing-text a{
+	color: #325CF5;
+	margin-bottom: 10px;
+}
+
+#landing-text::after {
+	content: "\a";
+    white-space: pre;
+}
+
+#form-centering {
+	display: flex;
+  	justify-content: center;
+  	padding-bottom: 50px;
+}
+
+.label-margin {
+	margin-right: 10px;
+}
+
+.form-field-right {
+	float: right;
+}
+
+.form-line-container {
+	display: flex;
+}
