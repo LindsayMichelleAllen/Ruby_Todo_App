@@ -18,7 +18,12 @@ class TodoTaskValidator < ActiveModel::Validator
 end
 
 class TodoTask < ApplicationRecord
-  # assocaitions
-  # hasy_many :subtasks
   validates_with TodoTaskValidator
+  
+  def isCurrent
+    if self.username == Current.user.username
+      return true
+    end
+    return false
+  end
 end

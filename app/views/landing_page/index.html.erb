@@ -1,0 +1,20 @@
+<h1>Welcome to my todo app!</h1>
+<p>I decided to create this project as a way to learn Ruby. Source code can be found at: </p>
+<a href="https://github.com/LindsayMichelleAllen/Ruby_Todo_App">Github - Ruby_Todo_App</a>
+
+<h2>What does it do?</h2>
+<p>Provides a way to keep track of tasks and stay organized</p>
+
+
+  <% if Current.user %>
+    Logged in as: <%= Current.user.email %><br>
+    <%= link_to 'View Todo List', todo_tasks_path, method: :get %>
+    <br>
+    <%= link_to 'Edit Password', edit_password_path %>
+    <%= button_to 'Logout', logout_path, method: :delete %>
+    <% else %>
+    <h2>Create a new account or login below to get started</h2>
+    <%= button_to 'Sign Up', sign_up_path, method: :get %>
+    <br>
+    <%= button_to 'Login', sign_in_path, method: :post %>
+  <% end %>

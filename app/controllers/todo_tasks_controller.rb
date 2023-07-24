@@ -22,6 +22,8 @@ class TodoTasksController < ApplicationController
   # POST /todo_tasks or /todo_tasks.json
   def create
     @todo_task = TodoTask.new(task_params)
+    #Accessing global sessoin for current user
+    @todo_task.username = Current.user.username
 
     respond_to do |format|
       if @todo_task.save

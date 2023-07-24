@@ -1,5 +1,4 @@
-<p style="color: green"><%= notice %></p>
-
+<% if @todo_task.isCurrent %>
 <%= render @todo_task %>
 
 <br>
@@ -11,4 +10,8 @@
   <br>
   <br>
   <%= button_to "Destroy this todo task", @todo_task, method: :delete %>
+  <p>
+  <%= link_to 'Return to Home', home_path, method: :get %>
+  </p>
 </div>
+<% end %>
