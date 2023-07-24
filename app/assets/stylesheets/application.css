@@ -31,7 +31,7 @@
 	margin-top: 30px;
 }
 
-#login-button-container{
+#button-container{
     overflow: hidden;
     width: 100%;
 	font-weight: 300;
@@ -56,6 +56,7 @@
   font-size: 16px;
   float: left;
   margin: 5px;
+  min-width: 230px;
 }
 
 #background-color {
@@ -77,4 +78,22 @@
 #landing-text::after {
 	content: "\a";
     white-space: pre;
+}
+
+#form-centering {
+	display: flex;
+  	justify-content: center;
+  	padding-bottom: 50px;
+}
+
+.label-margin {
+	margin-right: 10px;
+}
+
+.form-field-right {
+	float: right;
+}
+
+.form-line-container {
+	display: flex;
 }

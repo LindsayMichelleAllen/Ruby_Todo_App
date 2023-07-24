@@ -1,4 +1,5 @@
-<h1>Sign In</h1>
+<h1 id="heading">Sign In</h1>
+<div id="form-centering">
   <%= form_with url: sign_in_path do |f| %>
     <p>
     <%= f.label 'email:'%><br>
@@ -8,10 +9,13 @@
     <%= f.label 'password:'%><br>
     <%= f.password_field :password, id: 'password' %>
     </p>
+    <div id="button-container">
     <p>
-    <%= f.submit 'Log In' %>
+    <%= f.submit 'Log In', class: "button" %>
     </p>
-    <p>
-    <%= link_to 'Return to Home', home_path, method: :get %>
-    </p>
+    </div>
   <% end %>
+  </div>
+  <div id="button-container">
+    <%= button_to 'Return to Home', home_path, method: :get, class: "button" %>
+  </div>
