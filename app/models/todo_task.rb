@@ -18,12 +18,17 @@ class TodoTaskValidator < ActiveModel::Validator
 end
 
 class TodoTask < ApplicationRecord
+  belongs_to :user
   validates_with TodoTaskValidator
   
-  def isCurrent
+  def is_current
     if self.username == Current.user.username
       return true
     end
     return false
+  end
+  
+  def is_complete
+    return self.completed
   end
 end

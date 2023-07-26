@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_many :todo_tasks
     #provided by bcrypt gem
     has_secure_password
     #create getter & setter
