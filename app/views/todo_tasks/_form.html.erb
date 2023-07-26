@@ -11,19 +11,13 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :description, style: "margin-right: 10px;" %>
-    <%= form.text_field :description, style: "float: right;" %>
-  </div>
-  <br>
-  <div>
-    <%= form.label :reminder, style: "margin-right: 10px;" %>
-    <%= form.datetime_field :reminder, style: "float: right;" %>
-  </div>
-  <br>
-  <div>
-    <%= form.label :dueby, style: "margin-right: 10px;" %>
-    <%= form.datetime_field :dueby, style: "float: right;" %>
+  <div class="form-grid">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+    <%= form.label :reminder %>
+    <%= form.datetime_field :reminder %>
+    <%= form.label :dueb %>
+    <%= form.datetime_field :dueby %>
   </div>
   <br>
   <div id="button-container">
