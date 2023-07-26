@@ -1,11 +1,11 @@
-<h1 id="heading">Todo tasks</h1>
+<h1 id="heading">Pending Tasks</h1>
 <div id="form-centering">
 <div id="todo_tasks">
   <% @todo_tasks.each do |todo_task| %>
     <% if todo_task.isCurrent %>
     <%= render todo_task %>
     <p>
-      <%= button_to "Show this todo task", todo_task, method: :get, params: { id: todo_task.object_id }, class: "button" %>
+      <%= button_to "Manage Task", todo_task, method: :get, params: { id: todo_task.object_id }, class: "button" %>
     </p>
     <% end %>
   <% end %>
@@ -14,6 +14,6 @@
 <br>
 
 <div id="button-container">
-<%= button_to "New todo task", new_todo_task_path, method: :get, class: "button" %>
+<%= button_to "New Task", new_todo_task_path, method: :get, class: "button" %>
 <%= button_to 'Return to Home', home_path, method: :get, class: "button" %>
 </div>

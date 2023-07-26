@@ -4,16 +4,10 @@
 </div>
 <br>
 
-<div id="button-container">
+<div id="button-container-2-max">
   <%= button_to "Edit Task", edit_todo_task_path(@todo_task), method: :get, class: "button" %> 
-</div>
-<div id="button-container">
   <%= button_to "Delete Task", @todo_task, method: :delete, class: "button" %>
-</div>
-<div id="button-container">
   <%= button_to "Back To Tasks", todo_tasks_path, method: :get, class: "button" %> 
-</div>
-<div id="button-container">
   <%= button_to 'Return to Home', home_path, method: :get, class: "button" %>
 </div>
 <% end %>
